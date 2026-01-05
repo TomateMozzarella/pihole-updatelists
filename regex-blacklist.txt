@@ -1,4 +1,16 @@
-# --- MMotti Generic Ad/Tracking Regex ---
+###############################################
+# Kombinierte Regex-Blacklist für Pi-hole
+# Enthält:
+# - MMotti generische Tracking/Ad-Regex
+# - Spezifische Tracking-Domains
+# - User-requested Full-Service Blocks (sehr aggressiv!)
+# - Korrigierte SendGrid-Regex
+###############################################
+
+
+###############
+# MMOTTI REGEX
+###############
 ^ad([sxv]?[0-9]*|system)[_.-]([^.[:space:]]+\.){1,}|[_.-]ad([sxv]?[0-9]*|system)[_.-]
 ^(.+[_.-])?adse?rv(er?|ice)?s?[0-9]*[_.-]
 ^(.+[_.-])?telemetry[_.-]
@@ -12,9 +24,12 @@
 ^count(ers?)?[0-9]*[_.-]
 ^mads\.
 ^pixels?[-.]
-^stat(s|istics)?[0-9]*[_.-]
+^stat(s|statistics)?[0-9]*[_.-]
 
-# --- Additional Domain-Based Regex (Optimized) ---
+
+#########################
+# GENERISCHE DOMAIN-REGEX
+#########################
 (^|\.)ads?\.
 (^|\.)adserver\.
 (^|\.)advertising\.
@@ -23,7 +38,10 @@
 (^|\.)metrics\.
 (^|\.)analytics\.
 
-# --- Google / YouTube Ads ---
+
+#########################
+# GOOGLE / YOUTUBE ADS
+#########################
 (^|\.)googlesyndication\.com$
 (^|\.)doubleclick\.net$
 (^|\.)googletagmanager\.com$
@@ -35,7 +53,10 @@
 (^|\.)youtubei\.googleapis\.com$
 (^|\.)yt\.beacons\.youtube\.com$
 
-# --- Amazon / Prime Video Tracking ---
+
+#########################
+# AMAZON / PRIME VIDEO
+#########################
 (^|\.)amazon-adsystem\.com$
 (^|\.)aax-eu\.amazon-adsystem\.com$
 (^|\.)aax-us\.amazon-adsystem\.com$
@@ -45,16 +66,39 @@
 (^|\.)smetrics\.primevideo\.com$
 (^|\.)media-amazon\.com$
 
-# --- Netflix Tracking ---
+
+#########################
+# NETFLIX TRACKING
+#########################
 (^|\.)analytics\.netflix\.com$
 (^|\.)secure\.netflix\.com$
 (^|\.)nflxext\.com$
 (^|\.)nflxvideo\.net$
 
-# --- Misc Tracking Providers ---
+
+#########################
+# WEITERE TRACKING-DIENSTE
+#########################
 (^|\.)conviva\.com$
 (^|\.)scorecardresearch\.com$
 (^|\.)crashlytics\.com$
 
-# --- SendGrid (Tracking Pixel) ---
-(\w+\.)*sendgrid\.nwt$
+
+###############################################
+# USER-REQUESTED FULL-SERVICE BLOCKS (Achtung!)
+# Diese blockieren komplette Dienste!
+###############################################
+(^|\.)facebook\.com$
+(^|\.)fbcdn\.net$
+(^|\.)rtl\.de$
+(^|\.)rtlplus\.de$
+(^|\.)pluto\.tv$
+(^|\.)watch\.primevideo\.com$
+(^|\.)primevideo\.com\.edgekey\.net$
+(^|\.)joyn\.de\.edgekey\.net$
+
+
+#########################
+# SENDGRID (korrigiert)
+#########################
+(\w+\.)*(sendgrid)(\.nwt)$
