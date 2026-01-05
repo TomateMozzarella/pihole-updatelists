@@ -4,7 +4,6 @@
 # - MMotti generische Tracking/Ad-Regex
 # - Spezifische Tracking-Domains
 # - User-requested Full-Service Blocks (sehr aggressiv!)
-# - Korrigierte SendGrid-Regex
 ###############################################
 
 
