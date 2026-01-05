@@ -1,13 +1,77 @@
+############################################################
+# PI-HOLE ADLISTS
+############################################################
+
+
+############################################################
+# 🟦 1. ALL-IN-ONE / GENERAL PURPOSE BLOCKLISTS
+# Große, gemischte Listen (Ads, Tracking, Malware)
+############################################################
+
+# StevenBlack Unified Hosts (sehr umfangreich, stabil)
 https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
-https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0
-https://v.firebog.net/hosts/RPiList-Phishing.txt
-https://v.firebog.net/hosts/RPiList-Malware.txt
-https://easylist.to/easylist/easylist.txt
+
+# AdAway mobile hosts (klassisch, solide)
+#https://adaway.org/hosts.txt
+
+
+
+############################################################
+# 🟧 2. ADS / TRACKING BLOCKLISTS
+# Fokus auf Werbung, Analytics, Tracking
+############################################################
+
+# EasyList – klassische Werbefilter (Browser-Standard)
+#https://easylist.to/easylist/easylist.txt
+
+# EasyPrivacy – Tracking/Analytics Blocker
 https://easylist.to/easylist/easyprivacy.txt
-https://filters.adtidy.org/extension/chromium/filters/11.txt
+
+# AdGuard Tracking Protection
+#https://filters.adtidy.org/extension/chromium/filters/11.txt
+
+# AdGuard Social Media Filter
 https://filters.adtidy.org/extension/chromium/filters/15.txt
+
+# Disconnect.me Tracking Protection
 https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
-https://v.firebog.net/hosts/Admiral.txt
-https://adaway.org/hosts.txt
+
+# Admiral Anti-Adblock Blocker List
+#https://v.firebog.net/hosts/Admiral.txt
+
+
+
+############################################################
+# 🟥 3. MALWARE / PHISHING / SECURITY LISTS
+# Sehr empfehlenswert für Schutz vor Schadsoftware
+############################################################
+
+# RPiList – Phishing Domains
+# https://v.firebog.net/hosts/RPiList-Phishing.txt
+
+# RPiList – Malware Domains
+https://v.firebog.net/hosts/RPiList-Malware.txt
+
+
+
+############################################################
+# 🟩 4. HAGEZI BLOCKLISTS (sehr modern & gepflegt)
+# Pro = starke Werbeblockade
+# TIF = Tracking, Identifiers, Fingerprinting
+############################################################
+
+# Hagezi Pro – starke Werbeblockade
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt
+
+# Hagezi TIF – Tracking, Identifiers, Fingerprinting
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt
+
+
+
+############################################################
+# 🟨 5. SPEZIAL-LISTEN
+# Kleinere, aber nützliche Ergänzungen
+############################################################
+
+# Yoyo.org – klassische Adserver-Liste
+https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0
