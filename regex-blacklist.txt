@@ -49,7 +49,7 @@
 (^|\.)moatads\.com$
 (^|\.)gvt2\.com$
 (^|\.)yt3\.ggpht\.com$
-(^|\.)youtubei\.googleapis\.com$
+#(^|\.)youtubei\.googleapis\.com$
 (^|\.)yt\.beacons\.youtube\.com$
 
 
@@ -63,7 +63,7 @@
 (^|\.)fls\.na\.amazon\.com$
 (^|\.)smetrics\.amazon\.com$
 (^|\.)smetrics\.primevideo\.com$
-(^|\.)media-amazon\.com$
+#(^|\.)media-amazon\.com$
 
 
 #########################
@@ -89,8 +89,8 @@
 ###############################################
 (^|\.)facebook\.com$
 (^|\.)fbcdn\.net$
-(^|\.)rtl\.de$
-(^|\.)rtlplus\.de$
+#(^|\.)rtl\.de$
+#(^|\.)rtlplus\.de$
 (^|\.)pluto\.tv$
 (^|\.)watch\.primevideo\.com$
 (^|\.)primevideo\.com\.edgekey\.net$
@@ -98,6 +98,6 @@
 
 
 #########################
-# SENDGRID (korrigiert)
+# SENDGRID
 #########################
 (\w+\.)*(sendgrid)(\.nwt)$
