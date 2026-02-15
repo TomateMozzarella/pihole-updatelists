@@ -48,7 +48,7 @@
 (^|\.)imasdk\.googleapis\.com$
 (^|\.)moatads\.com$
 (^|\.)gvt2\.com$
-(^|\.)yt3\.ggpht\.com$
+#(^|\.)yt3\.ggpht\.com$
 #(^|\.)youtubei\.googleapis\.com$
 (^|\.)yt\.beacons\.youtube\.com$
 
